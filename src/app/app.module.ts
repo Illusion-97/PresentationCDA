@@ -18,14 +18,12 @@ import {SafePipe} from "./pipes/safe-pipe.pipe";
 import {PortalModule} from "@angular/cdk/portal";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDatepickerModule} from "@angular/material/datepicker";
-import {NgxMatDatetimePickerModule, NgxMatNativeDateModule} from "@angular-material-components/datetime-picker";
 import {DatePipe} from "@angular/common";
 import {ExerciceComponent} from "./pages/exercice/exercice.component";
 import {StylePipe} from './pipes/style.pipe';
 import {HighlightsDirective} from './directives/highlights.directive';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {NotesComponent} from './components/modal/notes/notes.component';
-import {NgxColorsModule} from "ngx-colors";
 import {MatStepperModule} from "@angular/material/stepper";
 import {MatFormFieldModule} from "@angular/material/form-field";
 
@@ -56,10 +54,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    NgxMatNativeDateModule,
-    NgxMatDatetimePickerModule,
     MatProgressBarModule,
-    NgxColorsModule,
     MatStepperModule,
     MatFormFieldModule
   ],

@@ -7,15 +7,12 @@ import {Info, Infos} from "../../statics/infos";
   templateUrl: './side.component.html',
   styleUrls: ['./side.component.css']
 })
-export class SideComponent implements OnInit {
+export class SideComponent {
 
   currentRoute: string = ''
   topics: Info[];
 
   constructor() {
     this.topics = Infos.getValues();
-  }
-
-  ngOnInit(): void {
   }
 }

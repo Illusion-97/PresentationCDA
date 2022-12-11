@@ -35,10 +35,14 @@ export const SUMMARY_EX : Exemple[] = [
     type: "text",
     label: 'The Team'
   },{
-    content:`<div class="flex-grow-1 d-flex">
+    content:`<div class="h100 d-flex flex-column">
+<p class="w-100 text-center">Dawan needed to redesign the system for distributing technical news and events organized by the company.
+They were previously managed by the company intranet and distributed on a PHP web application.</p>
+<div class="flex-grow-1 d-flex">
 <img class="col-5" src="/assets/images/dawan.fr.PNG">
 <div class="col-2 flex-column justify-content-center align-items-center d-flex"><i class="fa-solid fa-right-long fs-1"></i></div>
 <img class="col-5" src="/assets/images/danews-rec.PNG">
+</div>
 </div>`,
     type: "text",
     label: 'The Project'
