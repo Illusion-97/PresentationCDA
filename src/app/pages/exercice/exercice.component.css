@@ -1,6 +1,6 @@
 .features article {
   width: calc(100% - 5em);
-  max-height: 50vh;
+  height: 3.5em;
 }
 
 .icon:hover:before {
@@ -8,8 +8,8 @@
 }
 
 .exercice {
-  margin: 1em 0 10px 3em;
-  flex: 1;
+  margin: 0 0 .25em 3.5em;
+  height: calc(100% - 3.5em);
   background-color: #3d444914;
   padding: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
@@ -45,4 +45,10 @@ pre {
 
 i::before {
   font-size: 1.25em;
+}
+
+img {
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
 }

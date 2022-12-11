@@ -5,7 +5,7 @@
   </header>
   <ul>
     <li *ngFor="let topic of topics; let first = first">
-      <a [routerLink]="topic.route">
+      <a [routerLink]="topic.route"  routerLinkActive="active">
         {{topic.title}}
         <div class="menu-icon">
           <i class="{{topic.icon || 'fab fa-angular'}}"></i>

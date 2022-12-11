@@ -7,7 +7,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatDialogModule} from "@angular/material/dialog";
 import {HomeComponent} from './pages/home/home.component';
-import {PipeComponent} from './pages/exercice/topics/pipe/pipe.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {SideComponent} from './components/side/side.component';
@@ -21,52 +20,27 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {NgxMatDatetimePickerModule, NgxMatNativeDateModule} from "@angular-material-components/datetime-picker";
 import {DatePipe} from "@angular/common";
-import {CoursComponent} from './components/modal/cours/cours.component';
-import {ChapitreMenuComponent} from './components/chapitre-menu/chapitre-menu.component';
 import {ExerciceComponent} from "./pages/exercice/exercice.component";
 import {StylePipe} from './pipes/style.pipe';
-import { TextCodeComponent } from './components/text-code/text-code.component';
-import { InstallComponent } from './pages/exercice/topics/install/install.component';
-import { HighlightsDirective } from './directives/highlights.directive';
-import { BindingComponent } from './pages/exercice/topics/binding/binding.component';
+import {HighlightsDirective} from './directives/highlights.directive';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
-import { BindingChildComponent } from './pages/exercice/topics/binding/binding-child/binding-child.component';
-import { ShematicsComponent } from './pages/exercice/topics/shematics/shematics.component';
-import { StructureComponent } from './pages/exercice/topics/structure/structure.component';
-import { DirectiveComponent } from './pages/exercice/topics/directive/directive.component';
-import { FormsComponent } from './pages/exercice/topics/forms/forms.component';
-import { RoutingComponent } from './pages/exercice/topics/routing/routing.component';
-import { NotesComponent } from './components/modal/notes/notes.component';
+import {NotesComponent} from './components/modal/notes/notes.component';
 import {NgxColorsModule} from "ngx-colors";
-import { PresentationPipe } from './pipes/presentation.pipe';
-import { ObservablesComponent } from './pages/exercice/topics/observables/observables.component';
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatFormFieldModule} from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
     AppComponent,
     ExerciceComponent,
     HomeComponent,
-    PipeComponent,
     HeaderComponent,
     FooterComponent,
     SideComponent,
     SafePipe,
-    CoursComponent,
-    ChapitreMenuComponent,
     StylePipe,
-    TextCodeComponent,
-    InstallComponent,
     HighlightsDirective,
-    BindingComponent,
-    BindingChildComponent,
-    ShematicsComponent,
-    StructureComponent,
-    DirectiveComponent,
-    FormsComponent,
-    RoutingComponent,
-    NotesComponent,
-    PresentationPipe,
-    ObservablesComponent
+    NotesComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +59,9 @@ import { ObservablesComponent } from './pages/exercice/topics/observables/observ
     NgxMatNativeDateModule,
     NgxMatDatetimePickerModule,
     MatProgressBarModule,
-    NgxColorsModule
+    NgxColorsModule,
+    MatStepperModule,
+    MatFormFieldModule
   ],
   providers: [
     DatePipe,

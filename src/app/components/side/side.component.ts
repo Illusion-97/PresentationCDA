@@ -9,6 +9,7 @@ import {Info, Infos} from "../../statics/infos";
 })
 export class SideComponent implements OnInit {
 
+  currentRoute: string = ''
   topics: Info[];
 
   constructor() {

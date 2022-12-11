@@ -47,7 +47,7 @@ button .mat-icon {
 .menu-title {
   display: flex;
   justify-content: space-between;
-  color: #f56a6a;
+  color: #0093D3;
   font-weight: bolder;
   font-size: 2em;
 }
@@ -74,7 +74,7 @@ header.major > :last-child {
 }
 
 .example-tooltip-red {
-  background: #f56a6a;
+  background: #0093D3;
   font-size: 1em;
 }
 
@@ -93,12 +93,13 @@ header.major > :last-child {
 
 *::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
   background-color: rgba(39, 40, 51, 0.365);
 }
 
 *::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #e44c65;
+  background-color: #0093D3;
 }
 
 .folder-border {
@@ -151,7 +152,7 @@ header.major > :last-child {
 
 .struct-scheme {
   border-radius: 10px;
-  border: 2px solid #f56a6a;
+  border: 2px solid #0093D3;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5) inset;
   padding: 2em !important;
   width: inherit;
@@ -174,7 +175,7 @@ header.major > :last-child {
 }
 
 .mat-progress-bar-fill::after {
-  background-color: #f56a6a;
+  background-color: #0093D3;
 }
 
 .pair {
@@ -184,4 +185,52 @@ header.major > :last-child {
 .app-color-picker {
   display: flex;
   justify-content: center;
+}
+
+.mat-horizontal-content-container {
+  height: calc(100% - 72px);
+}
+
+.mat-horizontal-stepper-content[aria-expanded="true"]{
+  height: 100%;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  border: #0093D3 solid 2px;
+  border-radius: 10px;
+  padding-bottom: 0.5em;
+  flex-grow: 1;
+}
+
+.team:not(:last-child){
+  margin-bottom: 0.5em;
+}
+
+.team div:first-child {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+.team div:not(:first-child) {
+  padding: 1em 2em;
+  border: #0093D3 solid 2px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  margin: auto;
+}
+
+pre code {
+  font-size: 1.5em;
+}
+
+.active .menu-icon i::after {
+  border-color: #0093D3 !important;
 }

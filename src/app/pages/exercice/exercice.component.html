@@ -1,30 +1,32 @@
-<div *ngIf="topic !== undefined && info; else error" class="features h100">
+<div *ngIf="topic !== undefined && info; else error" class="features h100 d-block">
   <article class="cdkdb">
-      <span (click)="openDialog()" class="icon {{info.icon || 'fa-gem'}}" matTooltip="Cours"
-            matTooltipClass="example-tooltip-red"></span>
     <div class="content h100 d-flex flex-column">
       <h3 style="font-weight: bold">{{info.title}}</h3>
-      <div class="info-texte" [innerHTML]="info.texte | safe:'html'"></div>
-      <ng-container *ngIf="info.exemple">
-        <div class="row flex-max">
-          <div class="col-6 col-12-small row  h100 overflow-auto">
-            <template *ngIf="!info.exemple.desc" #vc></template>
-            <div  *ngIf="info.exemple.desc" class="col-12">
-              <app-text-code [text]="info.exemple.desc"></app-text-code>
-            </div>
-          </div>
-          <pre class="col-6 col-12-small h100 overflow-auto"><code [highlight]=" info.exemple.content | style"></code></pre>
-        </div>
-      </ng-container>
     </div>
     <div class="note-box" cdkDragBoundary=".cdkdb" cdkDrag>
-      <button (click)="openDialog(true)" matTooltip="Notes"><i class="fa-solid fa-pen-to-square"></i></button>
+      <button (click)="openDialog()" matTooltip="Notes"><i class="fa-solid fa-pen-to-square"></i></button>
     </div>
   </article>
   <div class="exercice">
-    <router-outlet></router-outlet>
+    <mat-stepper class="h100">
+        <mat-step *ngFor="let exemple of info.exemple" [label]="exemple.label">
+          <a *ngIf="exemple.link" [href]="exemple.link" target="_blank">
+            <ng-container [ngTemplateOutlet]="content" [ngTemplateOutletContext]="{exemple:exemple}"></ng-container>
+          </a>
+          <ng-container *ngIf="!exemple.link" [ngTemplateOutlet]="content" [ngTemplateOutletContext]="{exemple:exemple}"></ng-container>
+        </mat-step>
+    </mat-stepper>
   </div>
 </div>
 <ng-template #error>
   Error
+</ng-template>
+<ng-template #content let-exemple="exemple">
+  <ng-container [ngSwitch]="exemple.type">
+    <div *ngSwitchDefault [innerHTML]="exemple.content" class="d-flex flex-column justify-content-between h100"></div>
+    <pre *ngSwitchCase="'code'" style="height: 100%"><code [highlight]="exemple.content| style"></code></pre>
+    <div *ngSwitchCase="'image'" class="d-flex h100 justify-content-center">
+      <img [src]="'/assets/images/' + exemple.content" [alt]="exemple.label">
+    </div>
+  </ng-container>
 </ng-template>
